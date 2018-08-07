@@ -1,14 +1,17 @@
 version: '3'
 services:
     node1:
+        container_name: node1
         image: sebak
         network_mode: "host"
         env_file: docker/node1.env
     node2:
+        container_name: node2
         image: sebak
         network_mode: "host"
         env_file: docker/node2.env
     node3:
+        container_name: node3
         image: sebak
         network_mode: "host"
         env_file: docker/node3.env
