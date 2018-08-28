@@ -5,14 +5,21 @@ services:
         image: sebak
         network_mode: "host"
         env_file: docker/node1.env
+        ports:
+            - "2821:2821"
     node2:
         container_name: node2
         image: sebak
         network_mode: "host"
         env_file: docker/node2.env
+        ports:
+            - "2822:2822"
     node3:
         container_name: node3
         image: sebak
         network_mode: "host"
         env_file: docker/node3.env
+        ports:
+            - "2823:2823"
+
 
