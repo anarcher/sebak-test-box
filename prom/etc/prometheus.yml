@@ -5,6 +5,6 @@ scrape_configs:
     - job_name: sebak_node
       scrape_interval: 5s
       static_configs:
-          - targets: ['localhost:2821','localhost:2822','localhost:2823','localhost:2824']
+          - targets: ['host.docker.internal:2821','host.docker.internal:2822','host.docker.internal:2823']
 
 

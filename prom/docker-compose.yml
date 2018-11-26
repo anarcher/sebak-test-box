@@ -6,17 +6,18 @@ services:
             - ./etc/:/etc/prometheus/
             - prometheus_data:/prometheus
         command:
-            - '-config.file=/etc/prometheus/prometheus.yml'
-            - '-storage.local.path=/prometheus'
+            - '--config.file=/etc/prometheus/prometheus.yml'
+            - '--storage.tsdb.path=/prometheus'
         expose:
             - 9090
         ports:
             - "9090:9090"
-        network_mode: host
     grafana:
         image: grafana/grafana
         depends_on:
             - db
+        expose:
+            - 3000
         ports:
             - "3000:3000"
         volumes:
